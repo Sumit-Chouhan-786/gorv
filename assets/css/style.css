@@ -1,0 +1,159 @@
+/*---------------- NAVBAR STYLING --------------*/
+.navbar-custom {
+    background: white;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.162);
+    padding: 12px 0;
+    transition: 0.3s;
+}
+
+/*--------------- MENU ITEMS ---------------*/
+.nav-link {
+    color: black !important;
+    font-size: 18px;
+    margin-right: 25px;
+    position: relative;
+    font-weight: 500;
+}
+
+/* Hover underline animation */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    left: 50%;
+    height: 3px;
+    background: black;
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.menu-icon span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #000; /* << Change this color */
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/*--------------- HAMBURGER ANIMATION ---------------*/
+.menu-icon {
+    cursor: pointer;
+    width: 28px;
+    height: 20px;
+    position: relative;
+    transition: 0.4s;
+}
+
+.menu-icon span {
+    position: absolute;
+    /* height: 3px; */
+    width: 100%;
+    background: black;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.menu-icon span:nth-child(1) {
+    top: 0;
+}
+.menu-icon span:nth-child(2) {
+    top: 8px;
+}
+.menu-icon span:nth-child(3) {
+    top: 16px;
+}
+
+/* Cross animation */
+.menu-icon.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 8px;
+}
+
+.menu-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 8px;
+}
+
+/* Disable scroll when mobile menu open */
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+/* hero section css */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.heroSwiper {
+    width: 100%;
+    height: 100%;
+}
+
+.heroSwiper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+/* Text Box */
+.hero-text-box {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    color: #fff;
+    max-width: 600px;
+}
+
+.top-line {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 10px;
+}
+
+.animated-text {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    opacity: 0;
+}
+
+/* CTA BUTTON */
+.hero-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 35px;
+    background: #ff5733;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Fade + Slide Animation */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
