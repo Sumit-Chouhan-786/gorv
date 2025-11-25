@@ -8,11 +8,18 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- Icons -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-<!-- swiper slider -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
+<!-- Slick Slider CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+<!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<!-- animate library -->
+   <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
 <link rel="stylesheet" href="./assets/css/root.css">
 <link rel="stylesheet" href="./assets/css/style.css">
 <style>
@@ -21,8 +28,8 @@
 </head>
 
 <body>
-<!-- NAVBAR -->
-<nav class="navbar bg-white navbar-expand-lg navbar-custom fixed-top">
+<!-- navbar start here -->
+<nav class="navbar bg-white navbar-expand-lg navbar-custom sticky-top">
     <div class="container">
 
         <!-- Logo -->
@@ -64,45 +71,90 @@
         </div>
     </div>
 </nav>
+<!-- navbar end here -->
+ <section>
+ <div class="hero_slider">
+    <div class="position-relative hero_layer">
+        <div class="animated_content position-absolute top-50 start-50 translate-middle text-center hero-content-box">
+            <h3 class="hero-text animate__animated animate__fadeInUp text-white animate__fast font_xl"> || शोधं कृते प्रभावः  ||</h3>
+            <h1 class="text-white font_6xl hero-text animate__animated animate__fadeInUp animate__slow">We are trusted for creativity, impact and professionalism</h1>
+            <button class="hero_button hero-text animate__animated animate__fadeInUp animate__slower">Contact Us Now</button>
+        </div>
+        <img src="./assets/images/hero_slide4.jpg" alt="hero slide">
+    </div>
+    <div class="position-relative hero_layer">
+        <div class="animated_content position-absolute top-50 start-50 translate-middle text-center hero-content-box">
+            <h3 class="hero-text animate__animated animate__fadeInUp text-white animate__fast font_xl"> || शोधं कृते प्रभावः  ||</h3>
+            <h1 class="text-white font_6xl hero-text animate__animated animate__fadeInUp animate__slow">We are trusted for creativity, impact and professionalism</h1>
+            <button class="hero_button hero-text animate__animated animate__fadeInUp animate__slower">Contact Us Now</button>
+        </div>
+        <img src="./assets/images/hero_slide2.jpg" alt="hero slide">
+    </div>
+    <div class="position-relative hero_layer">
+        <div class="animated_content position-absolute top-50 start-50 translate-middle text-center hero-content-box">
+            <h3 class="hero-text animate__animated animate__fadeInUp text-white animate__fast font_xl"> || शोधं कृते प्रभावः  ||</h3>
+            <h1 class="text-white font_6xl hero-text animate__animated animate__fadeInUp animate__slow">We are trusted for creativity, impact and professionalism</h1>
+            <button class="hero_button hero-text animate__animated animate__fadeInUp animate__slower">Contact Us Now</button>
+        </div>
+        <img src="./assets/images/hero_slide3.jpg" alt="hero slide">
+    </div>
+   
+</div>
+
+ </section>
 <!-- hero section start here -->
 <section class="hero-container">
-    <div class="swiper heroSwiper">
-        <div class="swiper-wrapper">
-
-            <!-- Slide 1 -->
-            <div class="swiper-slide" data-title="We Are Trusted For Creativity, Impact And Professionalism">
-                <img src="https://images.unsplash.com/photo-1503264116251-35a269479413" />
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="swiper-slide" data-title="We Help You Grow Faster With Digital Branding">
-                <img src="https://images.unsplash.com/photo-1503342394128-c104d54dba01" />
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="swiper-slide" data-title="Building Brands With Strategy, Design And Innovation">
-                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" />
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Overlay Text -->
-    <div class="hero-text-box">
-        <p class="top-line">— || शोध कर्ते प्रभाव: ||</p>
-        <h1 id="mainHeading" class="animated-text"></h1>
-
-        <a href="#" class="hero-btn">GET A FREE STRATEGY CALL →</a>
-    </div>
+ 
 </section>
 
-<!-- hero section end here -->
 
+<!-- hero section end here -->
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- swiper cdn -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Slick Slider JS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 <script src="./assets/js/index.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, 
+    easing: 'ease-in-out',
+    once: true, 
+  });
+</script>
+<script>
+$(document).ready(function(){
+  $('.hero_slider').slick({
+      dots: false, 
+      arrows: false,
+      infinite: true,
+      speed: 3000,
+      fade: false,
+      cssEase: 'linear',
+      autoplay: true,
+      autoplaySpeed: 3000,
+      pauseOnHover: false,
+  });
+  AOS.refresh();
+});
+
+</script>
+<script>
+    const animatedEls = document.querySelectorAll('.hero-text');
+    function retriggerAnimateCss() {
+      animatedEls.forEach(el => {
+        el.classList.remove('animate__animated', 'animate__fadeInUp');
+        void el.offsetWidth;
+
+        el.classList.add('animate__animated', 'animate__fadeInUp');
+      });
+    }
+    setInterval(retriggerAnimateCss, 6000);
+  </script>
 
 </body>
 </html>

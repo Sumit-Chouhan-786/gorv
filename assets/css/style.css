@@ -92,68 +92,73 @@ body.no-scroll {
 
 
 /* hero section css */
-.hero-container {
-    position: relative;
+.hero_slider img {
     width: 100%;
-    height: 90vh;
-    overflow: hidden;
-}
-
-.heroSwiper {
-    width: 100%;
-    height: 100%;
-}
-
-.heroSwiper img {
-    width: 100%;
-    height: 100%;
+    height: 500px;
     object-fit: cover;
-    filter: brightness(60%);
 }
-
-/* Text Box */
-.hero-text-box {
+.animated_content{
+    z-index: 2 !important;
+}
+.hero_layer::after {
+    content: "";
     position: absolute;
-    top: 50%;
-    left: 8%;
-    transform: translateY(-50%);
-    color: #fff;
-    max-width: 600px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
-.top-line {
-    font-size: 18px;
-    opacity: 0.9;
-    margin-bottom: 10px;
-}
 
-.animated-text {
-    font-size: 48px;
-    font-weight: 800;
-    line-height: 1.2;
-    opacity: 0;
-}
 
-/* CTA BUTTON */
-.hero-btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 35px;
-    background: #ff5733;
-    color: #fff;
-    border-radius: 40px;
-    font-weight: 600;
-    text-decoration: none;
-}
+        .hero_button {
+            background-color: #F48224;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 800;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            position: relative;
+            border-radius: 0 !important;
+            border: none;
+            transition:all 0.3s ease 0s;
+        }
+        .hero_button:hover,
+        .hero_button.active:hover{
+            color: #ffffff;
+        }
+        .hero_button:before{
+            content: "";
+            position: absolute;
+            top: -7px;
+            left: 0;
+            background-color:white;
+            width: 30%;
+            height: 4px;
+            transition:all 0.3s ease 0s;
+        }
+        .hero_button:after{
+            content: "";
+            position: absolute;
+            bottom: -7px;
+            right: 0;
+            background-color:white;
+            width: 30%;
+            height: 4px;
+            transition:all 0.3s ease 0s;
+        }
+        .hero_button:hover:before,
+        .hero_button:hover:after,
+        .hero_button.active:before,
+        .hero_button.active:after{
+            width: 100%;
+        }
 
-/* Fade + Slide Animation */
-@keyframes fadeUp {
-    0% {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        @media screen and (max-width: 575px){
+            .hero_button{
+                margin-bottom: 50px !important;
+                 padding: 5px 10px;
+            }
+        }

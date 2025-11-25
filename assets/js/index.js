@@ -20,33 +20,6 @@ menuBtn.addEventListener("click", () => {
 });
 
 
-// hero slider
- const heading = document.getElementById("mainHeading");
 
-    const swiper = new Swiper(".heroSwiper", {
-        loop: true,
-        effect: "fade",
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        speed: 1000,
-        on: {
-            init() {
-                updateHeading(this.slides[this.activeIndex]);
-            },
-            slideChange() {
-                updateHeading(this.slides[this.activeIndex]);
-            }
-        }
-    });
 
-    function updateHeading(slide) {
-        const text = slide.getAttribute("data-title");
-
-        heading.style.animation = "none";
-        void heading.offsetWidth; // restart animation
-        heading.style.animation = "fadeUp 0.8s forwards";
-
-        heading.innerHTML = text;
-    }
+    
