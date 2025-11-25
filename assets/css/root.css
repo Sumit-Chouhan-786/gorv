@@ -14,6 +14,7 @@ body {
 :root {
   --color-primary:#3898;
   --color-secondary:#3898;
+  --color-orange:#F48224;
   --font-xs: 14px;
   --font-sm: 15px;
   --font-base: 17px;
@@ -34,6 +35,9 @@ body {
 
 .text_light_orange {
   color: var(--color-light-orange) !important;
+}
+.text_orange{
+  color: var(--color-orange);
 }
 
 /*=========================================== DEFINE-ALL = FONT-SIZES ========================================== */

@@ -1,3 +1,50 @@
+/* common button */
+.neon-btn {
+    position: relative;
+    display: inline-block;
+    padding: 12px 28px;
+    color: #fff;
+    background: #111;
+    border: 2px solid var(--color-orange);
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.3s ease;
+    box-shadow: 0 0 8px var(--color-orange);
+}
+
+.neon-btn:hover {
+    background: var(--color-orange);
+    color: #111;
+    box-shadow: 0 0 15px var(--color-orange), 0 0 30px var(--color-orange);
+    border-color: var(--color-orange);
+}
+
+/* Shine Effect */
+.neon-btn::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: 0.5s;
+}
+
+.neon-btn:hover::before {
+    left: 100%;
+}
+
+
+
 /*---------------- NAVBAR STYLING --------------*/
 .navbar-custom {
     background: white;
@@ -24,10 +71,13 @@
     width: 0%;
     left: 50%;
     height: 3px;
-    background: black;
+    background: var(--color-orange);
     transition: 0.3s;
 }
 
+.nav-link:hover{
+    color: var(--color-orange) !important;
+}
 .nav-link:hover::after {
     width: 100%;
     left: 0;
@@ -114,7 +164,7 @@ body.no-scroll {
 
 
         .hero_button {
-            background-color: #F48224;
+            background-color:var(--color-orange);
             color: #fff;
             font-size: 20px;
             font-weight: 800;
