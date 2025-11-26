@@ -33,9 +33,8 @@
     <div class="container">
 
         <!-- Logo -->
-        <a  class="navbar-brand fw-bold font_4xl" href="#">
-            <!-- <img src="./assets/images/logo.png" alt="logo"> -->
-             Logo
+        <a  class="navbar-brand" href="#">
+            <img height="100" width="100" src="./assets/images/logo.png" alt="logo">
         </a>
 
         <!-- Right icons (search + menu) -->
@@ -73,36 +72,30 @@
 </nav>
 <!-- navbar end here -->
 <!-- hero section start here -->
- <section>
- <div class="hero_slider">
-    <div class="position-relative hero_layer">
-        <div class="animated_content position-absolute top-50 start-50 translate-middle text-center hero-content-box">
-            <h3 class="hero-text animate__animated animate__fadeInUp text-white animate__fast font_xl"> || शोधं कृते प्रभावः  ||</h3>
-            <h1 class="text-white font_6xl hero-text animate__animated animate__fadeInUp animate__slow">We are trusted for creativity, impact and professionalism</h1>
-            <button class="hero_button hero-text animate__animated animate__fadeInUp animate__slower">Contact Us Now</button>
+<section>
+    <div class="hero_slider">
+           <!-- Slide 1 -->
+        <div class="position-relative hero-slide">
+            <div class="animated_content position-absolute top-50 start-50 translate-middle text-center hero-content-box">
+                <h3 class="hero-text animate__animated animate__fadeInUp text_orange animate__fast font_xl"> || शोधं कृते प्रभावः  ||</h3>
+                <h1 class="text_orange font_6xl hero-text animate__animated animate__fadeInUp animate__slow">
+                    We are trusted for creativity, impact and professionalism
+                </h1>
+                <button class="hero_button hero-text animate__animated animate__fadeInUp animate__slower">
+                    Contact Us Now
+                </button>
+            </div>
         </div>
-        <img src="./assets/images/hero_slide4.jpg" alt="hero slide">
-    </div>
-    <div class="position-relative hero_layer">
-        <div class="animated_content position-absolute top-50 start-50 translate-middle text-center hero-content-box">
-            <h3 class="hero-text animate__animated animate__fadeInUp text-white animate__fast font_xl"> || शोधं कृते प्रभावः  ||</h3>
-            <h1 class="text-white font_6xl hero-text animate__animated animate__fadeInUp animate__slow">We are trusted for creativity, impact and professionalism</h1>
-            <button class="hero_button hero-text animate__animated animate__fadeInUp animate__slower">Contact Us Now</button>
-        </div>
-        <img src="./assets/images/hero_slide2.jpg" alt="hero slide">
-    </div>
-    <div class="position-relative hero_layer">
-        <div class="animated_content position-absolute top-50 start-50 translate-middle text-center hero-content-box">
-            <h3 class="hero-text animate__animated animate__fadeInUp text-white animate__fast font_xl"> || शोधं कृते प्रभावः  ||</h3>
-            <h1 class="text-white font_6xl hero-text animate__animated animate__fadeInUp animate__slow">We are trusted for creativity, impact and professionalism</h1>
-            <button class="hero_button hero-text animate__animated animate__fadeInUp animate__slower">Contact Us Now</button>
-        </div>
-        <img src="./assets/images/hero_slide3.jpg" alt="hero slide">
-    </div>
-   
-</div>
 
- </section>
+        
+        <!-- Background Video -->
+        <video class="video-bg" autoplay muted loop playsinline>
+            <source src="./assets/video/hero-bg.mp4" type="video/mp4">
+        </video>
+
+    </div>
+</section>
+
 <!-- hero section end here -->
 <!-- About Section start here -->
 <section class="py-5 about-section bg-light">
@@ -404,23 +397,6 @@
     easing: 'ease-in-out',
     once: true, 
   });
-</script>
-<script>
-$(document).ready(function(){
-  $('.hero_slider').slick({
-      dots: false, 
-      arrows: false,
-      infinite: true,
-      speed: 3000,
-      fade: false,
-      cssEase: 'linear',
-      autoplay: true,
-      autoplaySpeed: 3000,
-      pauseOnHover: false,
-  });
-  AOS.refresh();
-});
-
 </script>
 <script>
     const animatedEls = document.querySelectorAll('.hero-text');
