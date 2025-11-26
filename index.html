@@ -91,17 +91,18 @@
 <section>
     <div class="hero_slider">
            <!-- Slide 1 -->
-        <div class="position-relative hero-slide">
-            <div class="animated_content position-absolute top-50 start-50 translate-middle text-center hero-content-box">
-                <h3 class="hero-text animate__animated animate__fadeInUp text-white animate__fast font_xl"> || शोधं कृते प्रभावः  ||</h3>
-                <h1 class="text-white font_6xl hero-text animate__animated animate__fadeInUp animate__slow">
-                    We are trusted for creativity, impact and professionalism
-                </h1>
-                <button class="hero_button hero-text animate__animated animate__fadeInUp animate__slower">
-                    Contact Us Now
-                </button>
-            </div>
-        </div>
+     <div class="position-relative hero-slide">
+    <div class="position-absolute top-50 start-50 translate-middle text-center">
+        <h3 class="hero-text font_xl text-white"> || शोधं कृते प्रभावः ||</h3>
+        <h1 class="text-white font_6xl hero-text">
+            We are trusted for creativity, impact and professionalism
+        </h1>
+        <button class="hero_button">
+            Contact Us Now
+        </button>
+    </div>
+</div>
+
 
         
         <!-- Background Video -->
@@ -661,18 +662,5 @@ style="background: url('https://images.unsplash.com/photo-1522071820081-009f0129
     once: true, 
   });
 </script>
-<script>
-    const animatedEls = document.querySelectorAll('.hero-text');
-    function retriggerAnimateCss() {
-      animatedEls.forEach(el => {
-        el.classList.remove('animate__animated', 'animate__fadeInUp');
-        void el.offsetWidth;
-
-        el.classList.add('animate__animated', 'animate__fadeInUp');
-      });
-    }
-    setInterval(retriggerAnimateCss, 6000);
-  </script>
-
 </body>
 </html>

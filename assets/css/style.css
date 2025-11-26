@@ -273,6 +273,35 @@ body.no-scroll {
     left: 0;
 }
 
+/* Fade up animation */
+@keyframes fadeUpRepeat {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+}
+
+/* Apply animation to elements */
+.hero-text {
+  animation: fadeUpRepeat 7s ease-in-out infinite; 
+}
+
+.hero_button {
+  animation: fadeUpRepeat 7s ease-in-out infinite; 
+}
+.hero-text:nth-child(1) { animation-delay: 0s; }
+.hero-text:nth-child(2) { animation-delay: 1s; }
+.hero_button { animation-delay: 2s; }
+
+
 .animated_content {
     z-index: 2 !important;
 }
@@ -341,25 +370,28 @@ body.no-scroll {
         padding: 5px 10px;
     }
 }
+
 /* vision section css */
+.vision-section{
+    background-image: url("../images/vision-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
 .vision_card .vision-item{
-      background:var(--color-orange) !important; 
-      color: white !important;
+      background:white; 
+      color: var(--color-orange) !important;
   backdrop-filter: blur(10px);          
   -webkit-backdrop-filter: blur(10px);   
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-
+border: 1px solid var(--color-orange);
 }
 
-.vision_card p{
-    color: white !important;
-}
 
 .vision_card .vision-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(7, 172, 95, 0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 0px 10px var(--color-orange) !important;
 }
 
 

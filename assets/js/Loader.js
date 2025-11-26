@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
 
   // Prevent scrolling while preloader is visible
-  body.style.overflow = "hidden";
+  body.style.overflow = "unset";
 
   setTimeout(() => {
     // Fade out preloader
@@ -16,5 +16,5 @@ document.addEventListener("DOMContentLoaded", () => {
       // Restore scrolling
       body.style.overflow = "auto";
     }, 500); // fade-out duration
-  }, 3000); // wait 3 seconds
+  }, 0); // wait 3 seconds
 });
