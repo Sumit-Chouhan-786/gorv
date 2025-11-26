@@ -144,7 +144,7 @@ body.no-scroll {
 /* hero section css */
 .hero_slider {
     position: relative;
-    height: 500px;
+    height: 520px;
     overflow: hidden;
 }
 
@@ -263,6 +263,49 @@ body.no-scroll {
 }
 
 
+/* our team section css */
+.team-card .team-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.team-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: 0.5s ease;
+  border-radius: 12px;
+}
+
+.team-card:hover img {
+  transform: scale(1.1);
+  filter: brightness(60%);
+}
+
+.team-info {
+  position: absolute;
+  bottom: -100px;
+  left: 20px;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.team-card:hover .team-info {
+  bottom: 20px;
+}
+
+.team-info h5 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.team-info p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
         /* services section css */
         .service-card {
     position: relative;
