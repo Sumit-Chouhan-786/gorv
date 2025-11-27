@@ -2,13 +2,14 @@
 const menuBtn = document.getElementById("menuBtn");
 const navBar = document.getElementById("navbarNav");
 
+// Sirf ek hi Bootstrap instance banao (IMPORTANT)
+const bsCollapse = new bootstrap.Collapse(navBar, {
+    toggle: false
+});
+
+// Hamburger click
 menuBtn.addEventListener("click", () => {
     menuBtn.classList.toggle("active");
-
-    // toggle collapse
-    const bsCollapse = new bootstrap.Collapse(navBar, {
-        toggle: false
-    });
 
     if (menuBtn.classList.contains("active")) {
         bsCollapse.show();
@@ -17,6 +18,17 @@ menuBtn.addEventListener("click", () => {
         bsCollapse.hide();
         document.body.classList.remove("no-scroll");
     }
+});
+
+// ✅ Mobile link click par auto close
+const navLinks = document.querySelectorAll("#navbarNav .nav-link");
+
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        menuBtn.classList.remove("active");
+        bsCollapse.hide();
+        document.body.classList.remove("no-scroll");
+    });
 });
 
 
