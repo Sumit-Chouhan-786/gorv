@@ -371,42 +371,41 @@ body.no-scroll {
     }
 }
 
-/* vision section css */
-.vision-section{
-    background-image: url("../images/vision-bg.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-.vision_card .vision-item{
-      background:white; 
-      color: var(--color-orange) !important;
-  backdrop-filter: blur(10px);          
-  -webkit-backdrop-filter: blur(10px);   
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-border: 1px solid var(--color-orange);
-}
-
-
-.vision_card .vision-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0px 10px var(--color-orange) !important;
-}
-
-
 /* about section css */
-.glass-box {
-    backdrop-filter: blur(12px);
-    background: rgba(0, 0, 0, 0.50);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    animation: fadeInUp 1s ease-in-out;
+/* Make image overflow outside container */
+.overflow-wrap {
+  position: relative;
+  width: 120%;
+  margin-left: -25%;    /* pushes image out of container */
 }
 
-.about-hero {
-    position: relative;
-    padding-top: 80px;
-    padding-bottom: 80px;
+.about-img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 15px 40px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.typing-title{
+    min-height: 30px;
+}
+
+@media (min-width:991px) {
+    .typing-title{
+    min-height: 38px;
+}
+
+.overflow-wrap {
+  position: relative;
+  width: 100%;
+  margin-left: auto;   
+}
+}
+/* Strong 3D Hover Tilt Effect */
+.overflow-wrap:hover .about-img {
+  transform: perspective(900px) rotateY(12deg) rotateX(6deg) scale(1.05);
+  box-shadow: 0px 25px 60px rgba(0,0,0,0.25);
 }
 
 
@@ -422,6 +421,7 @@ border: 1px solid var(--color-orange);
     width: 100%;
     height: 300px;
     object-fit: cover;
+     object-position: top;
     transition: 0.5s ease;
     border-radius: 12px;
 }
@@ -606,4 +606,51 @@ border: 1px solid var(--color-orange);
 
 .footer_link:hover {
     color: var(--color-orange) !important;
+}
+
+
+/* our partners section css */
+.marquee {
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: marquee-left 20s linear infinite;
+}
+
+.marquee-left .marquee-content {
+  animation: marquee-left 20s linear infinite;
+}
+
+.marquee-right .marquee-content {
+  animation: marquee-right 20s linear infinite;
+  
+}
+
+.marquee-right{
+    rotate: 355deg;
+}
+.marquee-left{
+    rotate: 355deg;
+}
+
+.marquee img {
+  height: 50px; 
+  width: auto;
+}
+
+/* Left to Right animation */
+@keyframes marquee-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Right to Left animation */
+@keyframes marquee-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
 }
