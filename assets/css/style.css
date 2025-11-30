@@ -693,3 +693,97 @@ body.no-scroll {
   }
 }
 
+
+/* grow with us section css */
+.grow-with-us {
+  max-height: 500px;
+  height: 500px;
+  background: #f9fafb;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* ✅ Background Video */
+.bg-video-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ✅ Dark Overlay on BG Video */
+.grow-with-us::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+
+/* ✅ Foreground Layer Above BG */
+.grow-with-us .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ✅ Left Image */
+.grow-img {
+  max-width: 280px;
+}
+
+/* ✅ Right Video Box */
+.video-wrapper {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ✅ Animated Arrow */
+.animated-arrow {
+  position: absolute;
+  left: 43%;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: moveArrow 2s infinite ease-in-out;
+  z-index: 10;
+}
+
+.animated-arrow img,
+.animated-arrow svg {
+  width: 60px;
+}
+
+/* ✅ Arrow Animation */
+@keyframes moveArrow {
+  0%   { transform: translate(0, -50%); opacity: 0.3; }
+  50%  { transform: translate(40px, -50%); opacity: 1; }
+  100% { transform: translate(0, -50%); opacity: 0.3; }
+}
+
+/* ✅ Mobile Fix */
+@media (max-width: 768px) {
+  .grow-with-us {
+    height: auto;
+    max-height: none;
+    padding: 30px 0;
+  }
+
+  .animated-arrow {
+    display: none;
+  }
+}
