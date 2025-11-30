@@ -787,3 +787,48 @@ body.no-scroll {
     display: none;
   }
 }
+
+.animates_gif{
+  width: 400px;
+  rotate: 50deg;
+  transform: scale(4);   /* 1.2, 1.5, 2 etc */
+  left: -30px;
+  position: relative;
+  z-index: -1;
+}
+.grow_man{
+  position: relative;
+  z-index: 20;
+}
+
+
+@media (min-width:768px) {
+    .animates_gif{
+  width: 400px;
+  rotate: 50deg;
+  transform: scale(2);   /* 1.2, 1.5, 2 etc */
+  left: -100px;
+  position: relative;
+  z-index: -1;
+}
+}
+@media (min-width:992px) {
+  .animates_gif{
+  width: 400px;
+  rotate: 50deg;
+  transform: scale(3);   /* 1.2, 1.5, 2 etc */
+  left: -30px;
+  position: relative;
+  z-index: -1;
+}
+}
+@media (min-width:1200px) {
+  .animates_gif{
+  width: 400px;
+  rotate: 50deg;
+  transform: scale(4);   /* 1.2, 1.5, 2 etc */
+  left: -30px;
+  position: relative;
+  z-index: -1;
+}
+}
