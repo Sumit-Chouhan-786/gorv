@@ -697,8 +697,8 @@ body.no-scroll {
   }
 
   .gallery_slide .slide {
-    min-width: 90vw;   /* ✅ Only ONE slide visible */
-    max-width: 90vw;
+    min-width: 92vw;   /* ✅ Only ONE slide visible */
+    max-width: 92vw;
     opacity: 1;
     transform: scale(1);
   }
