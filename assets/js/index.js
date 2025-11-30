@@ -77,58 +77,26 @@ navLinks.forEach(link => {
 
 
   // about slider
-  const track = document.getElementById("sliderTrack");
-  let slides = Array.from(track.children);
+$(document).ready(function () {
+  $('.slick-gallery').slick({
+    centerMode: true,
+    centerPadding: '0px',
+    slidesToShow: 3,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 600,
+    arrows: false,
+    dots: false,
 
-  const slideWidth = slides[0].offsetWidth + 25;
-  let index = 1;
-
-  // Clone for infinite loop
-  track.appendChild(slides[0].cloneNode(true));
-  track.insertBefore(slides[slides.length - 1].cloneNode(true), slides[0]);
-  slides = Array.from(track.children);
-
-  function setPosition() {
-    const wrapperWidth = document.querySelector(".center-slider-wrapper").offsetWidth;
-    const centerOffset = (wrapperWidth / 2) - (slideWidth / 2);
-    track.style.transform = `translateX(${-(index * slideWidth) + centerOffset}px)`;
-
-    slides.forEach(slide => slide.classList.remove("active"));
-    slides[index].classList.add("active");
-  }
-
-  setPosition();
-
-  function nextSlide() {
-    index++;
-    track.style.transition = "0.6s ease";
-    setPosition();
-
-    if (index >= slides.length - 1) {
-      setTimeout(() => {
-        track.style.transition = "none";
-        index = 1;
-        setPosition();
-      }, 600);
-    }
-  }
-
-  function prevSlide() {
-    index--;
-    track.style.transition = "0.6s ease";
-    setPosition();
-
-    if (index <= 0) {
-      setTimeout(() => {
-        track.style.transition = "none";
-        index = slides.length - 2;
-        setPosition();
-      }, 600);
-    }
-  }
-
-  // ✅ AUTOPLAY
-  setInterval(nextSlide, 3000);
-
-  // ✅ Fix on resize
-  window.addEventListener("resize", setPosition);
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true
+        }
+      }
+    ]
+  });
+});
