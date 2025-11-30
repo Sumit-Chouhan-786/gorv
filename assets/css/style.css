@@ -690,19 +690,22 @@ body.no-scroll {
   transform: scale(1);
 }
 
-/* ✅ Mobile */
 @media (max-width: 768px) {
- .gallery_slide .slide {
-    min-width: 85%;
+
+  .gallery_slide .center-slider-track {
+    justify-content: center;
   }
 
- .gallery_slide .slide img {
-    height: 200px;
+  .gallery_slide .slide {
+    min-width: 90vw;   /* ✅ Only ONE slide visible */
+    max-width: 90vw;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .gallery_slide .slide img {
+    height: 220px;
   }
 }
-@media (max-width: 576px) {
-.gallery_slide .center-slider-track {
-  gap: 40px !important;
-}
-}
+
 
