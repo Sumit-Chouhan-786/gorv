@@ -2,19 +2,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const preloader = document.getElementById("preloader");
   const body = document.body;
 
-  // Prevent scrolling while preloader is visible
-  body.style.overflow = "unset";
+  // Lock scroll
+  body.style.overflow = "hidden";
 
-  setTimeout(() => {
-    // Fade out preloader
-    preloader.style.opacity = "0";
-
+  window.addEventListener("load", () => {
     setTimeout(() => {
-      // Hide preloader completely
-      preloader.style.display = "none";
+      preloader.style.opacity = "0";
 
-      // Restore scrolling
-      body.style.overflow = "auto";
-    }, 500); // fade-out duration
-  }, 0); // wait 3 seconds
+      setTimeout(() => {
+        preloader.style.display = "none";
+        body.style.overflow = "auto";
+      }, 500);
+    }, 2000); // small delay for smooth finish
+  });
 });
