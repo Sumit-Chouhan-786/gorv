@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         preloader.style.display = "none";
         body.style.overflow = "auto";
-      }, 500);
-    }, 2000); // small delay for smooth finish
+      }, 100);
+    }, 1200); // small delay for smooth finish
   });
 });
