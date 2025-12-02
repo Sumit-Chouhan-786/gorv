@@ -81,14 +81,14 @@ $(document).ready(function () {
   $('.slick-gallery').slick({
     centerMode: true,
     centerPadding: '0px',
-    slidesToShow: 3,
+    slidesToShow: 1,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 3000,
     speed: 600,
     arrows: false,
     dots: false,
-
+ pauseOnHover: false,
     responsive: [
       {
         breakpoint: 992,

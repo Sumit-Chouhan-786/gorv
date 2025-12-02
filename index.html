@@ -97,12 +97,9 @@
 </nav>
 <!-- navbar end here -->
   <!-- our gallery section start here -->
-<section class="py-5 gallery-section">
+<section class="gallery-section">
   <div class="text-center overflow-hidden">
-    <h2 class="fw-bold mb-sm-4 mb-2">Our Gallery</h2>
-
-    <div class="gallery_slide slick-gallery px-3">
-
+    <div class="gallery_slide slick-gallery">
       <div class="slide"><img src="./assets/images/about-slide-1.webp"></div>
       <div class="slide"><img src="./assets/images/about-slide-2.webp"></div>
       <div class="slide"><img src="./assets/images/about-slide-3.webp"></div>
@@ -110,11 +107,43 @@
       <div class="slide"><img src="./assets/images/about-slide-5.webp"></div>
       <div class="slide"><img src="./assets/images/about-slide-6.webp"></div>
       <div class="slide"><img src="./assets/images/about-slide-7.webp"></div>
-
     </div>
   </div>
 </section>
  <!-- our gallery section end here -->
+  <!-- About Section start here -->
+<section id="about" class="about-hero py-5 overflow-hidden" style="background:#f8f9fa;">
+  <div class="container">
+    <div class="row flex-lg-row flex-column-reverse align-items-center">
+      <!-- LEFT IMAGE (Overflow + Tilt Hover) -->
+     <div class="col-lg-6 mt-4 mb-lg-0">
+  <div class="overflow-wrap" data-tilt>
+    <img 
+      src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" 
+      class="about-img"
+      alt="about img"
+    >
+  </div>
+</div>
+      <!-- RIGHT TEXT -->
+      <div class="col-lg-6">
+        <h3 class="fw-bold text_orange">About Us</h3>
+
+        <h2 class="typing-title fw-bold mb-2">
+          <span id="typing-text"></span>
+        </h2>
+
+        <p>
+         Fiesta PR Agency helps brands connect, engage, and grow through strategic communication. We create tailored PR solutions that strengthen your image and amplify your message. With experience across multiple industries, our team delivers impactful media relations, content creation, and brand strategy. We work closely with you to build visibility, trust, and long-lasting audience relationships.
+        </p>
+
+        <a aria-label="contact" href="#contact" class="neon-btn mt-3">Contact Us</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- about section end here -->
 <!-- hero section start here -->
 <section id="hero">
     <div class="hero_slider">
@@ -143,84 +172,7 @@
     </div>
 </section>
 <!-- hero section end here -->
-<!-- About Section start here -->
-<section id="about" class="about-hero py-5 overflow-hidden" style="background:#f8f9fa;">
-  <div class="container">
-    <div class="row align-items-center">
-      <!-- LEFT IMAGE (Overflow + Tilt Hover) -->
-     <div class="col-lg-6 mb-4 mb-lg-0">
-  <div class="overflow-wrap" data-tilt>
-    <img 
-      src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" 
-      class="about-img"
-      alt="about img"
-    >
-  </div>
-</div>
 
-
-      <!-- RIGHT TEXT -->
-      <div class="col-lg-6" data-aos="fade-left">
-        <h3 class="fw-bold text_orange">About Us</h3>
-
-        <h2 class="typing-title fw-bold mb-2">
-          <span id="typing-text"></span>
-        </h2>
-
-        <p>
-         Fiesta PR Agency helps brands connect, engage, and grow through strategic communication. We create tailored PR solutions that strengthen your image and amplify your message. With experience across multiple industries, our team delivers impactful media relations, content creation, and brand strategy. We work closely with you to build visibility, trust, and long-lasting audience relationships.
-        </p>
-
-        <a aria-label="contact" href="#contact" class="neon-btn mt-3">Contact Us</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- about section end here -->
- <!-- grow bussiness start here -->
- <section class="grow-with-us bg-light py-5 overflow-hidden">
-    <!-- <div class="bg-video-wrapper">
-    <video class="bg-video"
-           src="./assets/video/grow-bg2.mp4"
-           autoplay
-           muted
-           loop
-           playsinline>
-    </video>
-  </div> -->
-   <div class="container h-100">
-    <h2 class="fw-bold  text-center mb-3">Grow With us</h2>
-    <div class="row align-items-center justify-content-center position-relative">
-
-      <!-- Animated Arrow -->
-      <!-- <div class="animated-arrow">
-    <img class="animates_gif" src="./assets/images/line-gif.gif" alt="gif">
-
-      </div> -->
-
-      <!-- Left Image -->
-      <!-- <div class="col-lg-6 col-md-6 grow_man text-center">
-        <img class="img-fluid grow-img" src="./assets/images/bussiness-img.webp" alt="Grow with us">
-      </div> -->
-
-      <!-- Right Video -->
-      <div class="col-lg-4 col-md-6">
-        <div class="video-wrapper">
-          <video src="./assets/video/gif-video.mp4"
-                 autoplay
-                 muted
-                 loop
-                 playsinline>
-          </video>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
- <!-- grow bussiness end here -->
 <!-- services section start here -->
 
 <section id="service" class="py-5 service-section bg-light">
@@ -357,6 +309,28 @@
   </div>
 </section>
 <!-- services section end here -->
+ 
+ <!-- grow bussiness start here -->
+ <section class="grow-with-us bg-light pb-5 overflow-hidden">
+   <div class="container h-100">
+    <div class="row align-items-center justify-content-center position-relative">
+
+      <!-- Right Video -->
+      <div class="col-lg-4 col-md-6">
+        <div class="video-wrapper">
+          <video src="./assets/video/gif-video.mp4"
+                 autoplay
+                 muted
+                 loop
+                 playsinline>
+          </video>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+ <!-- grow bussiness end here -->
  <!-- our team section start here -->
 <section id="team" class="py-5 bg-white">
   <div class="container">
@@ -478,78 +452,130 @@
   <div class="container">
 
     <div class="text-center mb-3">
-      <h2 class="fw-bold">What Our Clients Say</h2>
+      <h2 class="fw-bold">Our Clients</h2>
       <p class="text-muted">Real testimonials from our happy customers</p>
     </div>
 
     <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
 
-        <!-- Testimonial 1 -->
-        <div class="carousel-item pb-3 pt-1 active">
-          <div class="testimonial-card mx-auto p-4 p-md-5 rounded-4" data-aos="fade-up">
-            <div class="text-center">
-              <img src="./assets/images/client-1.webp"class="testimonial-img object-fit-contain" alt="stars">
-              <h5 class="fw-bold mt-3">MDH</h5>
-              <div class="text-warning mb-2">
-                ★★★★★
-              </div>
-              <p class="text-muted">
-                “Amazing service! The team is very professional and delivered everything on time.
-                Highly recommended!”
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 2 -->
-        <div class="carousel-item pb-3 pt-1">
-          <div class="testimonial-card mx-auto p-4 p-md-5 rounded-4" data-aos="fade-up">
-            <div class="text-center">
-              <img src="./assets/images/client-2.webp" class="testimonial-img" alt="stars">
-              <h5 class="fw-bold mt-3">Aam Aadmi Party</h5>
-              <div class="text-warning mb-2">
-                ★★★★★
-              </div>
-              <p class="text-muted">
-                “Great experience! Very supportive team and excellent results.
-                I am extremely satisfied.”
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 3 -->
-        <div class="carousel-item pb-3 pt-1">
-          <div class="testimonial-card mx-auto p-4 p-md-5  rounded-4" data-aos="fade-up">
-            <div class="text-center">
-              <img src="./assets/images/client-3.webp" class="testimonial-img" alt="stars">
-              <h5 class="fw-bold mt-3">श्री प्रेमानंद जी महाराज</h5>
-              <div class="text-warning mb-2">
-                ★★★★★
-              </div>
-              <p class="text-muted">
-                “बेहतरीन काम! बातचीत सुचारू रही और अंतिम परिणाम उम्मीदों से बढ़कर था।”
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item pb-3 pt-1">
-          <div class="testimonial-card mx-auto p-4 p-md-5  rounded-4" data-aos="fade-up">
-            <div class="text-center">
-              <img src="./assets/images/client-4.webp" class="testimonial-img" alt="stars">
-              <h5 class="fw-bold mt-3">Brandenburg Gate, Berlin</h5>
-              <div class="text-warning mb-2">
-                ★★★★★
-              </div>
-              <p class="text-muted">
-                “Fista PR Agency made the entire process smooth and hassle-free.”
-              </p>
-            </div>
-          </div>
-        </div>
-
+  <!-- Slide 1 -->
+  <div class="carousel-item pb-3 pt-1 active">
+    <div class="testimonial-card mx-auto p-4 p-md-5 rounded-4" data-aos="fade-up">
+      <div class="text-center">
+        <img src="./assets/images/client-1.webp" class="testimonial-img object-fit-contain" alt="stars">
+        <h5 class="fw-bold mt-3">MDH Masale</h5>
+        <div class="text-warning mb-2">★★★★★</div>
+        <p class="text-muted">
+          “Amazing digital marketing services! Fista PR Agency helped us improve brand visibility and engagement across all major platforms. Their professional approach and timely delivery truly stand out.”
+        </p>
       </div>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="carousel-item pb-3 pt-1">
+    <div class="testimonial-card mx-auto p-4 p-md-5 rounded-4" data-aos="fade-up">
+      <div class="text-center">
+        <img src="./assets/images/client-2.webp" class="testimonial-img" alt="stars">
+        <h5 class="fw-bold mt-3">Aam Aadmi Party</h5>
+        <div class="text-warning mb-2">★★★★★</div>
+        <p class="text-muted">
+          “The team handled our public relations with impressive precision. Their strategic planning, media coordination, and timely execution strengthened our communication with the public. A dedicated and efficient PR partner!”
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="carousel-item pb-3 pt-1">
+    <div class="testimonial-card mx-auto p-4 p-md-5 rounded-4" data-aos="fade-up">
+      <div class="text-center">
+        <img src="./assets/images/client-3.webp" class="testimonial-img" alt="stars">
+        <h5 class="fw-bold mt-3">Germany Tourism</h5>
+        <div class="text-warning mb-2">★★★★★</div>
+        <p class="text-muted">
+          “Our experience with Fista PR Agency has been exceptional. Their PR strategies and tourism promotion campaigns were well-planned and effective. They helped us connect with a wider audience effortlessly.”
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 4 -->
+  <div class="carousel-item pb-3 pt-1">
+    <div class="testimonial-card mx-auto p-4 p-md-5 rounded-4" data-aos="fade-up">
+      <div class="text-center">
+        <img src="./assets/images/client-4.webp" class="testimonial-img" alt="stars">
+        <h5 class="fw-bold mt-3">Premanand Maharaj</h5>
+        <div class="text-warning mb-2">★★★★★</div>
+        <p class="text-muted">
+          “Fista PR Agency has managed my social media presence with great professionalism. Their creativity, consistency, and understanding of my audience have truly elevated my online reach. Highly recommended for anyone looking to grow digitally.”
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== REPEAT START (Slides 5–8) ===== -->
+
+  <!-- Slide 5 (Copy of Slide 1) -->
+  <div class="carousel-item pb-3 pt-1">
+    <div class="testimonial-card mx-auto p-4 p-md-5 rounded-4" data-aos="fade-up">
+      <div class="text-center">
+        <img src="./assets/images/client-1.webp" class="testimonial-img object-fit-contain" alt="stars">
+        <h5 class="fw-bold mt-3">MDH Masale</h5>
+        <div class="text-warning mb-2">★★★★★</div>
+        <p class="text-muted">
+          “Amazing digital marketing services! Fista PR Agency helped us improve brand visibility and engagement across all major platforms. Their professional approach and timely delivery truly stand out.”
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 6 (Copy of Slide 2) -->
+  <div class="carousel-item pb-3 pt-1">
+    <div class="testimonial-card mx-auto p-4 p-md-5 rounded-4" data-aos="fade-up">
+      <div class="text-center">
+        <img src="./assets/images/client-2.webp" class="testimonial-img" alt="stars">
+        <h5 class="fw-bold mt-3">Aam Aadmi Party</h5>
+        <div class="text-warning mb-2">★★★★★</div>
+        <p class="text-muted">
+          “The team handled our public relations with impressive precision. Their strategic planning, media coordination, and timely execution strengthened our communication with the public. A dedicated and efficient PR partner!”
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 7 (Copy of Slide 3) -->
+  <div class="carousel-item pb-3 pt-1">
+    <div class="testimonial-card mx-auto p-4 p-md-5 rounded-4" data-aos="fade-up">
+      <div class="text-center">
+        <img src="./assets/images/client-3.webp" class="testimonial-img" alt="stars">
+        <h5 class="fw-bold mt-3">Germany Tourism</h5>
+        <div class="text-warning mb-2">★★★★★</div>
+        <p class="text-muted">
+          “Our experience with Fista PR Agency has been exceptional. Their PR strategies and tourism promotion campaigns were well-planned and effective. They helped us connect with a wider audience effortlessly.”
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 8 (Copy of Slide 4) -->
+  <div class="carousel-item pb-3 pt-1">
+    <div class="testimonial-card mx-auto p-4 p-md-5 rounded-4" data-aos="fade-up">
+      <div class="text-center">
+        <img src="./assets/images/client-4.webp" class="testimonial-img" alt="stars">
+        <h5 class="fw-bold mt-3">Premanand Maharaj</h5>
+        <div class="text-warning mb-2">★★★★★</div>
+        <p class="text-muted">
+          “Fista PR Agency has managed my social media presence with great professionalism. Their creativity, consistency, and understanding of my audience have truly elevated my online reach. Highly recommended for anyone looking to grow digitally.”
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 
       <!-- Controls -->
       <button aria-label="prew slide" class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
@@ -581,26 +607,21 @@
 
           <p class="mb-2">
             <i class="bi bi-geo-alt-fill text_orange"></i> 
-            demo address
+           Town Park Hansi hisar Haryana , 125033
           </p>
 
           <p class="mb-2">
             <i class="bi bi-envelope-fill text_orange"></i>
-            demo@gmail.com
-          </p>
-
-          <p class="mb-4">
-            <i class="bi bi-telephone-fill text_orange"></i> 
-            +91 123-456-789
+            info@fiestapragency.in
           </p>
 
           <h3 class="fw- bold text-dark mb-3">Connect with us:</h3>
           <div class="d-flex gap-2">
-            <a aria-label="social link" href="#" class="social-icon"><i class="bi text-white bi-facebook"></i></a>
-            <a aria-label="social link" href="#" class="social-icon"><i class="bi text-white bi-twitter"></i></a>
-            <a aria-label="social link" href="#" class="social-icon"><i class="bi text-white bi-whatsapp"></i></a>
-            <a aria-label="social link" href="#" class="social-icon"><i class="bi text-white bi-instagram"></i></a>
-            <a aria-label="social link" href="#" class="social-icon"><i class="bi text-white bi-youtube"></i></a>
+            <a aria-label="social link" href="#" target="_blank" class="social-icon"><i class="bi text-white bi-facebook"></i></a>
+            <a aria-label="social link" href="#" target="_blank" class="social-icon"><i class="bi text-white bi-twitter"></i></a>
+            <a aria-label="social link" href="#" target="_blank" class="social-icon"><i class="bi text-white bi-whatsapp"></i></a>
+            <a aria-label="social link" href="#" target="_blank" class="social-icon"><i class="bi text-white bi-instagram"></i></a>
+            <a aria-label="social link" href="#" target="_blank" class="social-icon"><i class="bi text-white bi-youtube"></i></a>
           </div>
         </div>
 
@@ -608,12 +629,12 @@
         <div class="col-lg-6 p-4 p-lg-5 contact-gradient text-white">
           <h4 class="fw-bold mb-4 text-center">Contact us</h4>
 
-          <form>
-            <input type="text" class="form-control mb-3 contact-input" placeholder="Name">
-            <input type="email" class="form-control mb-3 contact-input" placeholder="Email">
-            <input type="text" class="form-control mb-3 contact-input" placeholder="Number">
-            <textarea class="form-control mb-3 contact-input" rows="4" placeholder="Message"></textarea>
-            <button aria-label="submit" class="form_button w-100 fw-bold">Submit</button>
+          <form action="https://formsubmit.co/sumitkhan.dhana@gmail.com" method="POST">
+            <input type="text" name="name" class="form-control mb-3 contact-input" placeholder="Name">
+            <input type="email" name="email" class="form-control mb-3 contact-input" placeholder="Email">
+            <input type="text" name="number" class="form-control mb-3 contact-input" placeholder="Number">
+            <textarea name="message" class="form-control mb-3 contact-input" rows="4" placeholder="Message"></textarea>
+            <button aria-label="submit" type="submit" class="form_button w-100 fw-bold">Submit</button>
           </form>
 
         </div>
