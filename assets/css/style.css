@@ -595,6 +595,9 @@ body.no-scroll {
     object-fit: cover;
     box-shadow: 0 0 10px rgba(0, 200, 255, 0.5);
 }
+.carousel-item .testimonial-card{
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.192);
+}
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
