@@ -629,13 +629,19 @@
         <div class="col-lg-6 p-4 p-lg-5 contact-gradient text-white">
           <h4 class="fw-bold mb-4 text-center">Contact us</h4>
 
-          <form action="https://formsubmit.co/sumitkhan.dhana@gmail.com" method="POST">
-            <input type="text" name="name" class="form-control mb-3 contact-input" placeholder="Name">
-            <input type="email" name="email" class="form-control mb-3 contact-input" placeholder="Email">
-            <input type="text" name="number" class="form-control mb-3 contact-input" placeholder="Number">
-            <textarea name="message" class="form-control mb-3 contact-input" rows="4" placeholder="Message"></textarea>
-            <button aria-label="submit" type="submit" class="form_button w-100 fw-bold">Submit</button>
-          </form>
+ <form id="contactForm" action="https://formsubmit.co/sumitkhan.dhana@gmail.com" method="POST">
+
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="box">
+  <input type="hidden" name="_subject" value="New Contact Form Message">
+
+  <input type="text" name="name" class="form-control mb-3 contact-input" placeholder="Name" required>
+  <input type="email" name="email" class="form-control mb-3 contact-input" placeholder="Email" required>
+  <input type="text" name="number" class="form-control mb-3 contact-input" placeholder="Number" required>
+  <textarea name="message" class="form-control mb-3 contact-input" rows="4" placeholder="Message" required></textarea>
+
+  <button type="submit" class="form_button w-100 fw-bold">Submit</button>
+</form>
 
         </div>
 
@@ -706,5 +712,30 @@
     "max-glare": 0.2
   });
 </script>
+<script>
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(response => {
+    if (response.ok) {
+      alert("✅ Message sent successfully!");
+      form.reset(); 
+    } else {
+      alert("❌ Something went wrong!");
+    }
+  })
+  .catch(error => {
+    alert("❌ Network error!");
+  });
+});
+</script>
+
 </body>
 </html>
