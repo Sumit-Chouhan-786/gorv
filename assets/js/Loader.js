@@ -13,6 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
         preloader.style.display = "none";
         body.style.overflow = "auto";
       }, 100);
-    }, 1200); 
+    }, 800); 
   });
 });
