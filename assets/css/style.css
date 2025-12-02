@@ -58,8 +58,8 @@
 
 /* Logo animation wrapper */
 .logo-loader {
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,6 +112,12 @@
 .nav_logo{
     object-fit: cover;
     height: auto;
+}
+
+@media (max-width:576px) {
+  .nav_logo{
+   width: 60px !important;
+}
 }
 
 
@@ -401,8 +407,7 @@ body.no-scroll {
 
 .team-card img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: 280px;
      object-position: top;
     transition: 0.5s ease;
     border-radius: 12px;
@@ -411,6 +416,7 @@ body.no-scroll {
 @media (max-width: 450px) {
   .team-card img {
     height: 320px !important;
+    object-fit: cover;
   }
 }
 @media (min-width: 992px) {
@@ -675,8 +681,8 @@ body.no-scroll {
 
 .gallery_slide .slide img {
   width: 100%;
-  height: 300px;
-  object-fit: cover;
+  height: 200px;
+  object-fit: 100% 100%;
   border-radius: 20px;
 }
 
@@ -697,7 +703,7 @@ body.no-scroll {
 .grow-with-us {
   max-height: 500px;
   height: 500px;
-  background: #f9fafb;
+  background: white !important;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -718,13 +724,13 @@ body.no-scroll {
 }
 
 /* ✅ Dark Overlay on BG Video */
-.grow-with-us::after {
+/* .grow-with-us::after {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.45);
   z-index: 1;
-}
+} */
 
 /* ✅ Foreground Layer Above BG */
 .grow-with-us .container {
