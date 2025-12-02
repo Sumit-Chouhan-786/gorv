@@ -47,7 +47,7 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(60px);
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -699,6 +699,15 @@ body.no-scroll {
   .gallery_slide .slide img {
     height: 220px;
   }
+}
+@media (max-width: 576px) {
+  .gallery_slide .slide img {
+    height: auto;
+  }
+  .gallery_slide {
+  padding: 0 0;
+}
+
 }
 
 
